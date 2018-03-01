@@ -1,3 +1,14 @@
 # microservice specific routes
 
-GET        /hello-world             @uk.gov.hmrc.apigatewaystub.controllers.MicroserviceHelloWorld.hello
+POST       /store/site/blocks/user/login/ajax/login.jag         @uk.gov.hmrc.apigatewaystub.controllers.UserController.login
+GET        /store/site/blocks/user/login/ajax/login.jag         @uk.gov.hmrc.apigatewaystub.controllers.UserController.logout
+POST       /store/site/blocks/user/sign-up/ajax/user-add.jag    @uk.gov.hmrc.apigatewaystub.controllers.UserController.createUser
+
+GET        /store/site/blocks/application/application-list/ajax/application-list.jag        @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.fetchApplication(applicationName)
+POST       /store/site/blocks/application/application-add/ajax/application-add.jag          @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.createApplication
+POST       /store/site/blocks/application/application-update/ajax/application-update.jag    @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.updateApplication
+POST       /store/site/blocks/application/application-remove/ajax/application-remove.jag    @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.deleteApplication
+
+POST       /store/site/blocks/subscription/subscription-add/ajax/subscription-add.jag         @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.addSubscriptionOrGenerateApplicationKey
+POST       /store/site/blocks/subscription/subscription-remove/ajax/subscription-remove.jag   @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.removeSubscription
+POST       /store/site/blocks/subscription/subscription-list/ajax/subscription-list.jag       @uk.gov.hmrc.apigatewaystub.controllers.ApplicationController.fetchSubscriptions

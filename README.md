@@ -1,8 +1,10 @@
-# api-gateway-stub
+# API Gateway Stub
 
-[![Build Status](https://travis-ci.org/hmrc/api-gateway-stub.svg)](https://travis-ci.org/hmrc/api-gateway-stub) [ ![Download](https://api.bintray.com/packages/hmrc/releases/api-gateway-stub/images/download.svg) ](https://bintray.com/hmrc/releases/api-gateway-stub/_latestVersion)
+[![Download](https://api.bintray.com/packages/hmrc/releases/api-gateway-stub/images/download.svg)](https://bintray.com/hmrc/releases/api-gateway-stub/_latestVersion)
 
-This is a placeholder README.md for a new repository
+This repository implements a stub for the API Gateway to facilitate local
+testing of microservices that interact with it without the overhead of spinning
+up the API Gateway itself.
 
 ### License
 
