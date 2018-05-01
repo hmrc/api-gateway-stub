@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sbt "~run -Dhttp.port=22222 $*"
+sbt "~run -Dhttp.port=9763 $*"

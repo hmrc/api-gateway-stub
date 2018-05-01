@@ -108,7 +108,7 @@ class ApplicationController @Inject()(applicationService: ApplicationService, su
 
   def fetchSubscriptions() = Action.async { implicit request =>
     request.body.asFormUrlEncoded.fold(badParametersResponse) { requestParams =>
-      val applicationName = requestParams("applicationName").head
+      val applicationName = requestParams("app").head
       subscriptionService.fetchSubscriptions(applicationName).map { subscriptions =>
         Ok(Json.obj(
           "error" -> false,

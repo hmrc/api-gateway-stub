@@ -25,7 +25,7 @@ case class ApplicationSubscription(name: String, version: String, tier: String)
 case class ApplicationKey(consumerKey: String, consumerSecret: String, accessToken: String)
 
 object ApplicationKey {
-  private def randomString(length: Int) = Random.alphanumeric.take(length).toString
+  private def randomString(length: Int) = Random.alphanumeric.take(length).mkString
 
   def generate() = ApplicationKey(randomString(28), randomString(28), randomString(28))
 }
