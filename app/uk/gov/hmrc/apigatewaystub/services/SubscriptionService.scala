@@ -45,7 +45,7 @@ class SubscriptionService @Inject()(applicationRepository: ApplicationRepository
         Future.failed[Unit](new IllegalArgumentException)
       } { application =>
         applicationRepository.save(
-          application.copy(subscriptions = application.subscriptions.filter(subscription =>
+          application.copy(subscriptions = application.subscriptions.filterNot(subscription =>
             subscription.name == apiName && subscription.version == apiVersion)
           )
         ).map(_ => ())
